@@ -51,7 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const stepperFill = $('#stepperFill');
   const dots = $$('.dot');
+function syncStickybarHeight(){
+  const bar = document.querySelector('.stickybar');
+  if (!bar) return;
+  document.documentElement.style.setProperty('--stickybar-h', `${bar.offsetHeight}px`);
+}
 
+syncStickybarHeight();
+window.addEventListener('resize', syncStickybarHeight);
   // 팀명 자동 생성
   const teamNameList = [
     '순대','떡볶이','대박','제로콜라','불고기와퍼','보노보노','요리왕비룡','검정고무신','도라에몽',
