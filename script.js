@@ -67,7 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = (pre + base).slice(0, 20);
     return name;
   }
+  function scrollToField(el) {
+  // 키보드 올라오는 타이밍 때문에 살짝 딜레이
+  setTimeout(() => {
+    const offset = 150; // stickybar + 여유
+    const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+  }, 220);
+}
 
+['vehicle', 'teamName', 'adultCount', 'youthCount'].forEach(id => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('focus', () => scrollToField(el));
+});
   // 방/난이도 선택 토글
   roomButtons.forEach(btn => {
     btn.addEventListener('click', () => {
