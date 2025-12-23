@@ -61,7 +61,7 @@ body::before{
 
 /* ✅ 스낵바도 스티키바 위로 */
 .snackbar{
-  bottom: calc(var(--stickybar-h) + 16px);
+  bottom: calc(var(--stickybar-h) + 8px);
 }
 
 /* (선택) 스티키바 padding shorthand를 안전하게 */
