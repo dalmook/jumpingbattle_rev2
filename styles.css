@@ -56,7 +56,7 @@ body::before{
 
 /* ✅ 본문 아래에 스티키바 높이만큼 여백 확보 */
 .page{
-  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 16px);
+  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 8px);
 }
 
 /* ✅ 스낵바도 스티키바 위로 */
