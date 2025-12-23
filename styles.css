@@ -21,6 +21,7 @@
   --r-xl:18px;
   --r-lg:14px;
   --r-md:12px;
+  --stickybar-h: 124px;
 }
 
 *{box-sizing:border-box}
@@ -156,6 +157,7 @@ body::before{
   gap:14px; width:100%;
   max-width:680px; margin:12px auto 0;
   padding:0 12px;
+  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 16px);
 }
 
 .card{
@@ -451,6 +453,8 @@ input[type="number"]{
   z-index:60;
   font-weight:900;
   box-shadow:var(--shadow);
+  bottom: calc(var(--stickybar-h) + 16px);
+  
 }
 .snackbar.show{opacity:1; transform:translateX(-50%) translateY(0); pointer-events:auto;}
 .snackbar.ok{background:var(--ok);}
