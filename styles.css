@@ -54,6 +54,20 @@ body::before{
 
 .page{min-height:100%;}
 
+/* ✅ 본문 아래에 스티키바 높이만큼 여백 확보 */
+.page{
+  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 16px);
+}
+
+/* ✅ 스낵바도 스티키바 위로 */
+.snackbar{
+  bottom: calc(var(--stickybar-h) + 16px);
+}
+
+/* (선택) 스티키바 padding shorthand를 안전하게 */
+.stickybar{
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+}
 /* 앱바 */
 .appbar{
   position:sticky; top:0; z-index:30;
