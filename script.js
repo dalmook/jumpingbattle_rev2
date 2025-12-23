@@ -137,7 +137,7 @@ window.addEventListener('resize', syncStickybarHeight);
       $('#teamName').value = makeTeamName();
       showSnack('추천 팀명 넣어드렸어요! 😆', 'ok', 1400);
     } else {
-      showSnack('팀명 너무 좋아요! 그대로 가도 OK 👌', 'ok', 1400);
+      showSnack('팀명 너무 좋아요! 그대로 OK 👌', 'ok', 1400);
     }
     vibrate(10);
     refresh();
@@ -310,7 +310,7 @@ window.addEventListener('resize', syncStickybarHeight);
 
   resetBtn.addEventListener('click', () => {
     hardReset();
-    showSnack('입력값을 초기화했어요 🙂', 'ok', 1400);
+    showSnack('초기화했어요 🙂', 'ok', 1400);
     vibrate(12);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
