@@ -160,6 +160,7 @@ window.addEventListener('resize', syncStickybarHeight);
     const total = adultAmt + youthAmt;
     priceText.textContent = fmt(total);
     priceDetail.textContent = `성인 ${adult} × ${fmt(PRICE.adult)} + 청소년 ${youth} × ${fmt(PRICE.youth)}`;
+  syncStickybarHeight(); // ✅ 추가
   }
 
   function updateDraft() {
