@@ -56,12 +56,12 @@ body::before{
 
 /* ✅ 본문 아래에 스티키바 높이만큼 여백 확보 */
 .page{
-  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 8px);
+  padding-bottom: calc(var(--stickybar-h) + env(safe-area-inset-bottom) + 4px);
 }
 
 /* ✅ 스낵바도 스티키바 위로 */
 .snackbar{
-  bottom: calc(var(--stickybar-h) + 8px);
+  bottom: calc(var(--stickybar-h) + 4px);
 }
 
 /* (선택) 스티키바 padding shorthand를 안전하게 */
